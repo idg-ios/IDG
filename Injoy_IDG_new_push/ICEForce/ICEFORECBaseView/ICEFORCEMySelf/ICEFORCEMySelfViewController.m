@@ -2,7 +2,7 @@
 //  ICEFORCEMySelfViewController.m
 //  InjoyIDG
 //
-//  Created by 念念不忘必有回响 on 2019/4/9.
+//  Created by 念念不忘必有回响 on 2019/4/25.
 //  Copyright © 2019 Injoy. All rights reserved.
 //
 
@@ -16,13 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // Do any additional setup after loading the view.
 }
 
 /*

@@ -58,7 +58,8 @@
         self.projectStateButton.hidden = YES;
     }else{
         self.projectStateButton.hidden = NO;
-        [self.projectStateButton setTitle:model.comInduStr forState:(UIControlStateNormal)];
+      
+        [self.projectStateButton setTitle:[NSString stringWithFormat:@"  %@  ",model.comInduStr] forState:(UIControlStateNormal)];
     }
     
     self.projectContLabel.text = model.zhDesc;

@@ -15,7 +15,7 @@
 #import "MJRefresh.h"
 #import "MBProgressHUD+CXCategory.h"
 
-@interface ICEFORCEFileLibraryViewController ()<UITableViewDelegate,UITableViewDataSource>{
+@interface ICEFORCEFileLibraryViewController ()<UITableViewDelegate,UITableViewDataSource,ICEFORCELibraryDelegate>{
     float total;
     float pageCount;
 }
@@ -24,6 +24,13 @@
 @property (nonatomic ,assign) NSInteger pageNumber;
 
 @property (nonatomic ,strong) NSMutableArray *personalArray;
+
+/** 行业id - 用于刷新 */
+@property (nonatomic ,strong) NSString *comIndu;
+/** 状态id - 用于刷新 */
+@property (nonatomic ,strong) NSString *stsId;
+/** 行业状态 - 用于刷新 */
+@property (nonatomic ,strong) NSString *projInvestedStatus;
 
 @end
 
@@ -55,7 +62,7 @@
     
     self.pageNumber = 1;
     
-    self.tableView = [[UITableView alloc]initWithFrame:(CGRectMake(0, 0, self.view.frame.size.width, Screen_Height-50-K_Height_NavBar)) style:(UITableViewStylePlain)];
+    self.tableView = [[UITableView alloc]initWithFrame:(CGRectMake(0, CGRectGetMaxY(rootTopView.frame), self.view.frame.size.width, Screen_Height-CGRectGetMaxY(rootTopView.frame)-K_Height_NavBar)) style:(UITableViewStylePlain)];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -67,6 +74,10 @@
 - (void)setupTableView{
     __weak typeof(self) weakSelf = self;
     [self.tableView addLegendHeaderWithRefreshingBlock:^{
+        
+        weakSelf.comIndu = nil;
+        weakSelf.projInvestedStatus = nil;
+        weakSelf.stsId = nil;
         [weakSelf reloadData];
     }];
     [self.tableView addLegendFooterWithRefreshingBlock:^{
@@ -116,14 +127,64 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     ICEFORCEFileLibraryModel *model = [self.personalArray objectAtIndex:indexPath.row];
-    
+    cell.delegateCell = self;
+    cell.model = model;
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 }
 
+-(void)showAlreadyRootCell:(ICEFORCEFileLibraryTableViewCell *)cell selectModel:(ICEFORCEFileLibraryModel *)model selectButton:(UIButton *)sender{
+    NSString *btTitle = sender.currentTitle;
+    btTitle = [btTitle stringByReplacingOccurrencesOfString:@" " withString:@""];
 
+    switch (sender.tag) {
+        case 101:{
+            if ([btTitle isEqualToString:[NSString stringWithFormat:@"%@",model.stsIdStr]]) {
+                self.comIndu = nil;
+                self.projInvestedStatus = nil;
+                self.stsId = model.stsId;
+            }
+            if ([btTitle isEqualToString:[NSString stringWithFormat:@"%@",model.comInduStr]]) {
+                self.projInvestedStatus = nil;
+                self.stsId = nil;
+                  self.comIndu = model.comIndu;
+            }
+          
+            [self reloadData];
+        }
+            break;
+        case 102:{
+            self.comIndu = nil;
+            self.stsId = nil;
+            self.projInvestedStatus = model.projInvestedStatus;
+            [self reloadData];
+        }
+            break;
+        case 103:{
+            
+            if ([btTitle isEqualToString:[NSString stringWithFormat:@"%@",model.stsIdStr]]) {
+                self.comIndu = nil;
+                self.projInvestedStatus = nil;
+                self.stsId = model.stsId;
+            }
+            if ([btTitle isEqualToString:[NSString stringWithFormat:@"%@",model.comInduStr]]) {
+                self.projInvestedStatus = nil;
+                self.stsId = nil;
+                self.comIndu = model.comIndu;
+            }
+            
+            [self reloadData];
+        }
+            break;
+        default:
+            break;
+    }
+    NSLog(@"-----------%@",sender.currentTitle);
+    
+    
+}
 
 -(void)loadService{
     
@@ -132,9 +193,9 @@
     [dic setValue:VAL_Account forKey:@"username"];
     [dic setValue:@(self.pageNumber) forKey:@"pageNo"];
     [dic setValue:@(10) forKey:@"pageSize"];
-    [dic setValue:@"INVESTED" forKey:@"projType"];
-//    [dic setValue:self.comIndu forKey:@"comIndu"];
-//    [dic setValue:self.projInvestedStatus forKey:@"projInvestedStatus"];
+    [dic setValue:self.comIndu forKey:@"comIndu"];
+    [dic setValue:self.projInvestedStatus forKey:@"projInvestedStatus"];
+    [dic setValue:self.stsId forKey:@"stsId"];
     
     [MBProgressHUD showHUDForView:self.view text:@"请稍候..."];
     [HttpTool postWithPath:POST_PROJ_Query_AllProj params:dic success:^(id JSON) {
@@ -171,13 +232,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

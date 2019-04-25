@@ -134,6 +134,7 @@
             self.projInvestedStatus = model.projInvestedStatus;
              [self reloadData];
         }
+             break;
         default:
             break;
     }

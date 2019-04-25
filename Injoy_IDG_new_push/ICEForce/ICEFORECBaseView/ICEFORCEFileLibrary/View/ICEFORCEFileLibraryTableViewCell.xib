@@ -41,6 +41,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="stateClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vj4-8t-uQ7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分散为主" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9td-YM-qYG">
                                 <rect key="frame" x="76" y="63" width="224" height="20"/>
@@ -69,6 +72,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="A"/>
+                                <connections>
+                                    <action selector="stateClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RrF-AB-eFh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM7-Zx-QHW">
                                 <rect key="frame" x="272.5" y="7" width="12.5" height="20"/>
@@ -79,7 +85,7 @@
                                 <color key="textColor" red="0.94117647059999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5K3-mK-40z">
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5K3-mK-40z">
                                 <rect key="frame" x="124" y="35" width="43" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="7ij-Yk-LNK"/>
@@ -88,6 +94,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="stateClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CEW-nX-RlQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -117,6 +126,16 @@
                     <constraint firstItem="rPh-nK-5N8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="WV8-jM-ULo"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="baseView" destination="rPh-nK-5N8" id="DWR-Ph-GXd"/>
+                <outlet property="groupLabel" destination="HIA-C0-yov" id="yLk-wv-2iK"/>
+                <outlet property="projectContLabell" destination="9td-YM-qYG" id="SBD-q8-zWG"/>
+                <outlet property="projectInButton" destination="5K3-mK-40z" id="6T7-IU-oLp"/>
+                <outlet property="projectNameLabel" destination="FNV-bF-96v" id="ZIl-EP-7cp"/>
+                <outlet property="projectStateButton" destination="ltI-ri-2jI" id="tJx-QC-dFt"/>
+                <outlet property="projecyTagButton" destination="B9G-Ps-uaZ" id="9Wd-IP-zEU"/>
+                <outlet property="userNameLabel" destination="fM7-Zx-QHW" id="f64-Wr-VAW"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

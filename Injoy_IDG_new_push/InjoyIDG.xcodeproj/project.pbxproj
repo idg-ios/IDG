@@ -1756,6 +1756,7 @@
 		DB1EFD072271918F00B62661 /* ICEFORCEFileLibraryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1EFD052271918F00B62661 /* ICEFORCEFileLibraryTableViewCell.m */; };
 		DB1EFD082271918F00B62661 /* ICEFORCEFileLibraryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB1EFD062271918F00B62661 /* ICEFORCEFileLibraryTableViewCell.xib */; };
 		DB1EFD0C2271957E00B62661 /* ICEFORCEFileLibraryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1EFD0B2271957E00B62661 /* ICEFORCEFileLibraryModel.m */; };
+		DB1EFD0F2271B00000B62661 /* ICEFORCEMySelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1EFD0E2271B00000B62661 /* ICEFORCEMySelfViewController.m */; };
 		DB2EA20822675D19004B8D71 /* ICEFORCEProjectShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2EA20622675D19004B8D71 /* ICEFORCEProjectShareViewController.m */; };
 		DB436FBD22682322006134CF /* ICEFORCEPersonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB436FBC22682322006134CF /* ICEFORCEPersonListViewController.m */; };
 		DB436FC322682E05006134CF /* ICEFORCEPersonListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB436FC122682E05006134CF /* ICEFORCEPersonListTableViewCell.m */; };
@@ -1826,7 +1827,6 @@
 		DBE60FA3225C4899006064FD /* ICEFORCEProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE60FA2225C4899006064FD /* ICEFORCEProjectViewController.m */; };
 		DBE60FA7225C4934006064FD /* ICEFORCEEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE60FA6225C4934006064FD /* ICEFORCEEventViewController.m */; };
 		DBE60FAB225C49BF006064FD /* ICEFORCEFileLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE60FAA225C49BF006064FD /* ICEFORCEFileLibraryViewController.m */; };
-		DBE60FAF225C4A5F006064FD /* ICEFORCEMySelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE60FAE225C4A5F006064FD /* ICEFORCEMySelfViewController.m */; };
 		DBE60FB2225C5706006064FD /* SingaporeNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE60FB0225C5705006064FD /* SingaporeNavViewController.m */; };
 		DBE60FBA225C5FD7006064FD /* ICEFORCEWorkShowTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE60FB8225C5FD7006064FD /* ICEFORCEWorkShowTextCell.m */; };
 		DBE60FBE225C9FFE006064FD /* ICEFORCEWorkHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE60FBD225C9FFD006064FD /* ICEFORCEWorkHeadView.m */; };
@@ -5187,8 +5187,10 @@
 		DB1EFD042271918F00B62661 /* ICEFORCEFileLibraryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEFileLibraryTableViewCell.h; sourceTree = "<group>"; };
 		DB1EFD052271918F00B62661 /* ICEFORCEFileLibraryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEFORCEFileLibraryTableViewCell.m; sourceTree = "<group>"; };
 		DB1EFD062271918F00B62661 /* ICEFORCEFileLibraryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ICEFORCEFileLibraryTableViewCell.xib; sourceTree = "<group>"; };
-		DB1EFD0A2271957E00B62661 /* ICEFORCEFileLibraryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEFileLibraryModel.h; sourceTree = "<group>"; };
+		DB1EFD0A2271957E00B62661 /* ICEFORCEFileLibraryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEFileLibraryModel.h; sourceTree = "<group>"; wrapsLines = 0; };
 		DB1EFD0B2271957E00B62661 /* ICEFORCEFileLibraryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEFORCEFileLibraryModel.m; sourceTree = "<group>"; };
+		DB1EFD0D2271B00000B62661 /* ICEFORCEMySelfViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEMySelfViewController.h; sourceTree = "<group>"; };
+		DB1EFD0E2271B00000B62661 /* ICEFORCEMySelfViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEFORCEMySelfViewController.m; sourceTree = "<group>"; };
 		DB2EA20522675D19004B8D71 /* ICEFORCEProjectShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEProjectShareViewController.h; sourceTree = "<group>"; };
 		DB2EA20622675D19004B8D71 /* ICEFORCEProjectShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEFORCEProjectShareViewController.m; sourceTree = "<group>"; };
 		DB436FBB22682322006134CF /* ICEFORCEPersonListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEPersonListViewController.h; sourceTree = "<group>"; };
@@ -5307,8 +5309,6 @@
 		DBE60FA6225C4934006064FD /* ICEFORCEEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEFORCEEventViewController.m; sourceTree = "<group>"; };
 		DBE60FA9225C49BF006064FD /* ICEFORCEFileLibraryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEFileLibraryViewController.h; sourceTree = "<group>"; };
 		DBE60FAA225C49BF006064FD /* ICEFORCEFileLibraryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEFORCEFileLibraryViewController.m; sourceTree = "<group>"; };
-		DBE60FAD225C4A5F006064FD /* ICEFORCEMySelfViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEMySelfViewController.h; sourceTree = "<group>"; };
-		DBE60FAE225C4A5F006064FD /* ICEFORCEMySelfViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEFORCEMySelfViewController.m; sourceTree = "<group>"; };
 		DBE60FB0225C5705006064FD /* SingaporeNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingaporeNavViewController.m; sourceTree = "<group>"; };
 		DBE60FB1225C5706006064FD /* SingaporeNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingaporeNavViewController.h; sourceTree = "<group>"; };
 		DBE60FB7225C5FD7006064FD /* ICEFORCEWorkShowTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEWorkShowTextCell.h; sourceTree = "<group>"; };
@@ -15458,8 +15458,8 @@
 		DBE60FAC225C4A31006064FD /* ICEFORCEMySelf */ = {
 			isa = PBXGroup;
 			children = (
-				DBE60FAD225C4A5F006064FD /* ICEFORCEMySelfViewController.h */,
-				DBE60FAE225C4A5F006064FD /* ICEFORCEMySelfViewController.m */,
+				DB1EFD0D2271B00000B62661 /* ICEFORCEMySelfViewController.h */,
+				DB1EFD0E2271B00000B62661 /* ICEFORCEMySelfViewController.m */,
 			);
 			path = ICEFORCEMySelf;
 			sourceTree = "<group>";
@@ -17239,7 +17239,6 @@
 				10D7D2A720ECCA1500FAE414 /* CXDDXMeetingDetailInfoChangeMeetingNameViewController.m in Sources */,
 				10B2E8571CB7D694004AB0A4 /* preprocess.c in Sources */,
 				10B2E8511CB7D694004AB0A4 /* lsp_tables_nb.c in Sources */,
-				DBE60FAF225C4A5F006064FD /* ICEFORCEMySelfViewController.m in Sources */,
 				10708DD31FE9243E00CE3B71 /* CXIDGConferenceInformationDetailViewController.m in Sources */,
 				10269EDA1F1DA89100CBB019 /* SDIMSearchResultCell.m in Sources */,
 				10DEDB7D1F4D9BCE0014A562 /* CXCXDepartmentListModel.m in Sources */,
@@ -17262,6 +17261,7 @@
 				1707F2838391A90A75937A81 /* YYTextParser.m in Sources */,
 				1707FB43111D5D8023A4C1AD /* YYTextArchiver.m in Sources */,
 				1707F3E57CCB4A95BAC649D4 /* YYTextAttribute.m in Sources */,
+				DB1EFD0F2271B00000B62661 /* ICEFORCEMySelfViewController.m in Sources */,
 				1707F36DC08DF2887B7F2BE3 /* YYTextRunDelegate.m in Sources */,
 				DBE60F9F225C4819006064FD /* ICEFORCEWorkViewController.m in Sources */,
 				8F5EB06621254B0C0062AC50 /* CXYMDDFeeDetailViewController.m in Sources */,
