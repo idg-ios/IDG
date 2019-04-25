@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *projectName;
 @property (weak, nonatomic) IBOutlet UILabel *contentText;
 @property (weak, nonatomic) IBOutlet UIButton *stateButton;
+@property (weak, nonatomic) IBOutlet UIButton *starButton;
 
 @end
 
@@ -23,6 +24,7 @@
     
     [MyPublicClass layerMasksToBoundsForAnyControls:self.baseView cornerRadius:4 borderColor:nil borderWidth:0];
     [MyPublicClass layerMasksToBoundsForAnyControls:self.projectState cornerRadius:self.projectState.frame.size.height/2 borderColor:nil borderWidth:0];
+   
 }
 
 
@@ -45,6 +47,15 @@
         
         [self.stateButton setTitle:[NSString stringWithFormat:@"  %@  ",model.stsIdStr] forState:(UIControlStateNormal)];
         [self.stateButton addTarget:self action:@selector(clickState:) forControlEvents:(UIControlEventTouchUpInside)];
+        if (model.followUpStatus.integerValue == 0) {
+            [self.starButton setImage:[UIImage imageNamed:@"blank_star"] forState:(UIControlStateNormal)];
+        }else if (model.followUpStatus.integerValue == 1){
+            [self.starButton setImage:[UIImage imageNamed:@"half_star"] forState:(UIControlStateNormal)];
+        }else{
+            [self.starButton setImage:[UIImage imageNamed:@"full_star"] forState:(UIControlStateNormal)];
+        }
+        
+         [self.starButton addTarget:self action:@selector(clickState:) forControlEvents:(UIControlEventTouchUpInside)];
         
     }
     
@@ -57,8 +68,8 @@
     
 }
 -(void)clickState:(UIButton *)sender{
-    if ([self.delegateCell respondsToSelector:@selector(showStateCell:selectModel:)]) {
-        [self.delegateCell showStateCell:self selectModel:self.model];
+    if ([self.delegateCell respondsToSelector:@selector(showStateCell:selectModel:selectButton:)]) {
+        [self.delegateCell showStateCell:self selectModel:self.model selectButton:sender];
     }
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

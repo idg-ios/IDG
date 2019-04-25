@@ -245,22 +245,22 @@
     
     NSString *title = self.dataArr[indexPath.section][indexPath.row];
     if ([@"ICEFORCE" isEqualToString:self.dataArr[indexPath.section][indexPath.row]]) {
-        CXItemManagementListViewController *vc = [[CXItemManagementListViewController alloc] init];
-        vc.title = title;
-        [self.navigationController pushViewController:vc animated:YES];
-        if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-            self.navigationController.interactivePopGestureRecognizer.delegate = nil;
-        }
-        
-       
-        
-    }else if ([@"月会安排" isEqualToString:self.dataArr[indexPath.section][indexPath.row]]) {
-        VAL_PUSHES_HAVEREAD_NEW(IM_PUSH_DM);//推送
-//        CXDailyMeetingViewController *vc = [[CXDailyMeetingViewController alloc] init];
+//        CXItemManagementListViewController *vc = [[CXItemManagementListViewController alloc] init];
+//        vc.title = title;
 //        [self.navigationController pushViewController:vc animated:YES];
+//        if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+//            self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+//        }
+//
         SingaporeTabBarViewController *base = [[SingaporeTabBarViewController alloc]init];
         base.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:base animated:YES];
+        
+    }else if ([@"月会安排" isEqualToString:self.dataArr[indexPath.section][indexPath.row]]) {
+        VAL_PUSHES_HAVEREAD_NEW(IM_PUSH_DM);//推送
+        CXDailyMeetingViewController *vc = [[CXDailyMeetingViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+      
         
         
     }else if ([@"我的差旅" isEqualToString:self.dataArr[indexPath.section][indexPath.row]]) {

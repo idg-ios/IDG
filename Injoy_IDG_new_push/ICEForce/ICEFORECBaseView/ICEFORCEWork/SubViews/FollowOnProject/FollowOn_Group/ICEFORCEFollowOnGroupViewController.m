@@ -1,27 +1,24 @@
 //
-//  ICEFORCEPotentialGroupViewController.m
+//  ICEFORCEFollowOnGroupViewController.m
 //  InjoyIDG
 //
-//  Created by 念念不忘必有回响 on 2019/4/12.
+//  Created by 念念不忘必有回响 on 2019/4/25.
 //  Copyright © 2019 Injoy. All rights reserved.
 //
 
-#import "ICEFORCEPotentialGroupViewController.h"
+#import "ICEFORCEFollowOnGroupViewController.h"
 
-#import "ICEFORCEPerAndGupTableViewCell.h"
-#import "ICEFORCEPotentialProjectmModel.h"
-
-#import "ICEFORCEPotentialDetailViewController.h"
+#import "ICEFORCEFollowOnTableViewCell.h"
+#import "ICEFORCEFollowOnModel.h"
 
 #import "HttpTool.h"
 #import "MJRefresh.h"
 #import "MBProgressHUD+CXCategory.h"
 
-@interface ICEFORCEPotentialGroupViewController ()<UITableViewDelegate,UITableViewDataSource,ICEFORCEPotentialProjectDelegate>{
+@interface ICEFORCEFollowOnGroupViewController ()<UITableViewDelegate,UITableViewDataSource,ICEFORCEFollowOnDelegate>{
     float total;
     float pageCount;
 }
-
 @property (nonatomic ,strong) UITableView *tableView;
 
 @property (nonatomic ,assign) NSInteger pageNumber;
@@ -29,12 +26,14 @@
 @property (nonatomic ,strong) NSMutableArray *personalArray;
 
 
-/** 项目子阶段ID */
-@property (nonatomic ,strong) NSString *subStsId;
+/** 行业id - 用于刷新 */
+@property (nonatomic ,strong) NSString *comIndu;
+/** 状态id - 用于刷新 */
+@property (nonatomic ,strong) NSString *stsId;
 
 @end
 
-@implementation ICEFORCEPotentialGroupViewController
+@implementation ICEFORCEFollowOnGroupViewController
 
 -(NSMutableArray *)personalArray{
     if (!_personalArray) {
@@ -45,6 +44,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self loadSubView];
     [self loadService];
 }
@@ -54,8 +54,6 @@
     
     self.tableView = [[UITableView alloc]initWithFrame:(CGRectMake(0, 0, self.view.frame.size.width, Screen_Height-50-K_Height_NavBar)) style:(UITableViewStylePlain)];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.showsVerticalScrollIndicator = NO;
-    self.tableView.showsHorizontalScrollIndicator = NO;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
@@ -66,6 +64,9 @@
 - (void)setupTableView{
     __weak typeof(self) weakSelf = self;
     [self.tableView addLegendHeaderWithRefreshingBlock:^{
+        
+        weakSelf.comIndu = nil;
+        weakSelf.stsId = nil;
         [weakSelf reloadData];
     }];
     [self.tableView addLegendFooterWithRefreshingBlock:^{
@@ -105,28 +106,64 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    static NSString *perAndGupCell = @"perAndGupCell";
+    static NSString *AlreadyRootCell = @"AlreadyRootCell";
     
-    ICEFORCEPerAndGupTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:perAndGupCell];
+    ICEFORCEFollowOnTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:AlreadyRootCell];
     if (cell == nil) {
         
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"ICEFORCEPerAndGupTableViewCell" owner:nil options:nil] firstObject];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"ICEFORCEFollowOnTableViewCell" owner:nil options:nil] firstObject];
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    ICEFORCEPotentialProjectmModel *model = [self.personalArray objectAtIndex:indexPath.row];
+    ICEFORCEFollowOnModel *model = [self.personalArray objectAtIndex:indexPath.row];
     cell.model = model;
     cell.delegateCell = self;
     
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    ICEFORCEPotentialProjectmModel *model = [self.personalArray objectAtIndex:indexPath.row];
-    ICEFORCEPotentialDetailViewController *detail = [[ICEFORCEPotentialDetailViewController alloc]init];
-    detail.model = model;
-    [self.navigationController pushViewController:detail animated:YES];
+    
 }
 
+-(void)showFollowOnRootCell:(ICEFORCEFollowOnTableViewCell *)cell selectModel:(ICEFORCEFollowOnModel *)model selectButton:(UIButton *)sender{
+    
+    NSString *btTitle = sender.currentTitle;
+    btTitle = [btTitle stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    switch (sender.tag) {
+        case 101:{
+            if ([btTitle isEqualToString:[NSString stringWithFormat:@"%@",model.stsIdStr]]) {
+                self.comIndu = nil;
+                self.stsId = model.stsId;
+            }
+            if ([btTitle isEqualToString:[NSString stringWithFormat:@"%@",model.comInduStr]]) {
+                self.stsId = nil;
+                self.comIndu = model.comIndu;
+            }
+            
+            [self reloadData];
+        }
+            break;
+            
+        case 102:{
+            
+            if ([btTitle isEqualToString:[NSString stringWithFormat:@"%@",model.stsIdStr]]) {
+                self.comIndu = nil;
+                self.stsId = model.stsId;
+            }
+            if ([btTitle isEqualToString:[NSString stringWithFormat:@"%@",model.comInduStr]]) {
+                self.stsId = nil;
+                self.comIndu = model.comIndu;
+            }
+            
+            [self reloadData];
+        }
+            break;
+        default:
+            break;
+    }
+    NSLog(@"-----------%@",sender.currentTitle);
+}
 
 -(void)loadService{
     
@@ -135,8 +172,9 @@
     [dic setValue:VAL_Account forKey:@"username"];
     [dic setValue:@(self.pageNumber) forKey:@"pageNo"];
     [dic setValue:@(10) forKey:@"pageSize"];
-    [dic setValue:@"POTENTIAL" forKey:@"projType"];
-    [dic setValue:self.subStsId forKey:@"stsId"];
+    [dic setValue:@"FOLLOW_ON" forKey:@"projType"];
+    [dic setValue:self.comIndu forKey:@"comIndu"];
+    [dic setValue:self.stsId forKey:@"stsId"];
     
     [MBProgressHUD showHUDForView:self.view text:@"请稍候..."];
     [HttpTool postWithPath:POST_PROJ_Query_Teamproj params:dic success:^(id JSON) {
@@ -145,13 +183,12 @@
         
         NSInteger status = [JSON[@"status"] integerValue];
         if (status == 200) {
-            total = [[[JSON objectForKey:@"data"] objectForKey:@"total"] floatValue];
-
+            
             NSArray *dataArray = [[JSON objectForKey:@"data"] objectForKey:@"data"];
+            total = [[[JSON objectForKey:@"data"] objectForKey:@"total"] floatValue];
             for (NSDictionary *dataDic in dataArray) {
-                ICEFORCEPotentialProjectmModel *model = [ICEFORCEPotentialProjectmModel modelWithDict:dataDic];
+                ICEFORCEFollowOnModel *model = [ICEFORCEFollowOnModel modelWithDict:dataDic];
                 [self.personalArray addObject:model];
-                
             }
             [self endRefre];
             [self.tableView reloadData];
@@ -163,18 +200,6 @@
         CXAlert(KNetworkFailRemind);
         
     }];
-}
-
--(void)showStateCell:(ICEFORCEPerAndGupTableViewCell *)cell selectModel:(ICEFORCEPotentialProjectmModel *)model selectButton:(UIButton *)selecButton{
-    if (selecButton.tag == 101) {
-        self.subStsId = model.stsId;
-        [self reloadData];
-    }
-   
-}
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*

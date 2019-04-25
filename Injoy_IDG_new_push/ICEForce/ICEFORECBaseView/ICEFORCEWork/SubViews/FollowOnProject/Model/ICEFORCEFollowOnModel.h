@@ -1,15 +1,16 @@
 //
-//  ICEFORCEPotentialProjectmModel.h
+//  ICEFORCEFollowOnModel.h
 //  InjoyIDG
 //
-//  Created by 念念不忘必有回响 on 2019/4/15.
+//  Created by 念念不忘必有回响 on 2019/4/25.
 //  Copyright © 2019 Injoy. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface ICEFORCEPotentialProjectmModel : NSObject
+NS_ASSUME_NONNULL_BEGIN
 
+@interface ICEFORCEFollowOnModel : NSObject
 
 /** 行业Code */
 @property (nonatomic ,copy) NSString *comIndu;
@@ -19,6 +20,12 @@
 @property (nonatomic ,copy) NSString *comPhaseStr;
 /**  */
 @property (nonatomic ,copy) NSString *enDesc;
+/**  */
+@property (nonatomic ,copy) NSString *followUpStatus;
+/**  */
+@property (nonatomic ,copy) NSString *headCity;
+/**  */
+@property (nonatomic ,copy) NSString *headCityStr;
 /**  */
 @property (nonatomic ,copy) NSString *headCount;
 /** 行业小组，选择 */
@@ -65,21 +72,21 @@
 @property (nonatomic ,copy) NSString *projTeamNames;
 /** 项目小组成员ID */
 @property (nonatomic ,copy) NSString *projTeams;
+/** 项目类型 */
+@property (nonatomic ,copy) NSString *projType;
 /**  */
 @property (nonatomic ,copy) NSString *secondGroupStr;
 /** 项目阶段 */
 @property (nonatomic ,copy) NSString *stsId;
+/**  */
+@property (nonatomic ,copy) NSString *stsIdAbbStr;
 /** 项目阶段，翻译 */
 @property (nonatomic ,copy) NSString *stsIdStr;
-/** 项目子阶段ID */
-@property (nonatomic ,copy) NSString *subStsId;
-/** 项目子阶段，翻译 */
-@property (nonatomic ,copy) NSString *subStsIdStr;
 /** 描述 */
 @property (nonatomic ,copy) NSString *zhDesc;
-/** 项目变更状态 0 未变更 1跟踪 2重点跟踪 */
-@property (nonatomic ,strong) NSNumber *followUpStatus;
 
 +(id)modelWithDict:(NSDictionary *)dict;
 
 @end
+
+NS_ASSUME_NONNULL_END

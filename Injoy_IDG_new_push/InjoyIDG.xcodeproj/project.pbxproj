@@ -1757,7 +1757,13 @@
 		DB1EFD082271918F00B62661 /* ICEFORCEFileLibraryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB1EFD062271918F00B62661 /* ICEFORCEFileLibraryTableViewCell.xib */; };
 		DB1EFD0C2271957E00B62661 /* ICEFORCEFileLibraryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1EFD0B2271957E00B62661 /* ICEFORCEFileLibraryModel.m */; };
 		DB1EFD0F2271B00000B62661 /* ICEFORCEMySelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1EFD0E2271B00000B62661 /* ICEFORCEMySelfViewController.m */; };
+		DB1EFD132271C8E800B62661 /* ICEFORCEFollowOnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1EFD122271C8E800B62661 /* ICEFORCEFollowOnViewController.m */; };
+		DB1EFD1E2271CA2700B62661 /* ICEFORCEFollowOnGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1EFD1D2271CA2700B62661 /* ICEFORCEFollowOnGroupViewController.m */; };
 		DB2EA20822675D19004B8D71 /* ICEFORCEProjectShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2EA20622675D19004B8D71 /* ICEFORCEProjectShareViewController.m */; };
+		DB37D8932271CA6C00BBE88C /* ICEFORCEFollowOnPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB37D8922271CA6C00BBE88C /* ICEFORCEFollowOnPersonalViewController.m */; };
+		DB37D8972271CBBA00BBE88C /* ICEFORCEFollowOnTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB37D8952271CBBA00BBE88C /* ICEFORCEFollowOnTableViewCell.m */; };
+		DB37D8982271CBBA00BBE88C /* ICEFORCEFollowOnTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB37D8962271CBBA00BBE88C /* ICEFORCEFollowOnTableViewCell.xib */; };
+		DB37D89D2271CE5D00BBE88C /* ICEFORCEFollowOnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB37D89C2271CE5D00BBE88C /* ICEFORCEFollowOnModel.m */; };
 		DB436FBD22682322006134CF /* ICEFORCEPersonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB436FBC22682322006134CF /* ICEFORCEPersonListViewController.m */; };
 		DB436FC322682E05006134CF /* ICEFORCEPersonListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB436FC122682E05006134CF /* ICEFORCEPersonListTableViewCell.m */; };
 		DB436FC422682E05006134CF /* ICEFORCEPersonListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB436FC222682E05006134CF /* ICEFORCEPersonListTableViewCell.xib */; };
@@ -5191,8 +5197,19 @@
 		DB1EFD0B2271957E00B62661 /* ICEFORCEFileLibraryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEFORCEFileLibraryModel.m; sourceTree = "<group>"; };
 		DB1EFD0D2271B00000B62661 /* ICEFORCEMySelfViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEMySelfViewController.h; sourceTree = "<group>"; };
 		DB1EFD0E2271B00000B62661 /* ICEFORCEMySelfViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEFORCEMySelfViewController.m; sourceTree = "<group>"; };
+		DB1EFD112271C8E800B62661 /* ICEFORCEFollowOnViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEFollowOnViewController.h; sourceTree = "<group>"; };
+		DB1EFD122271C8E800B62661 /* ICEFORCEFollowOnViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEFORCEFollowOnViewController.m; sourceTree = "<group>"; };
+		DB1EFD1C2271CA2700B62661 /* ICEFORCEFollowOnGroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEFollowOnGroupViewController.h; sourceTree = "<group>"; };
+		DB1EFD1D2271CA2700B62661 /* ICEFORCEFollowOnGroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEFORCEFollowOnGroupViewController.m; sourceTree = "<group>"; };
 		DB2EA20522675D19004B8D71 /* ICEFORCEProjectShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEProjectShareViewController.h; sourceTree = "<group>"; };
 		DB2EA20622675D19004B8D71 /* ICEFORCEProjectShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEFORCEProjectShareViewController.m; sourceTree = "<group>"; };
+		DB37D8912271CA6C00BBE88C /* ICEFORCEFollowOnPersonalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEFollowOnPersonalViewController.h; sourceTree = "<group>"; };
+		DB37D8922271CA6C00BBE88C /* ICEFORCEFollowOnPersonalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEFORCEFollowOnPersonalViewController.m; sourceTree = "<group>"; };
+		DB37D8942271CBBA00BBE88C /* ICEFORCEFollowOnTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEFollowOnTableViewCell.h; sourceTree = "<group>"; };
+		DB37D8952271CBBA00BBE88C /* ICEFORCEFollowOnTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEFORCEFollowOnTableViewCell.m; sourceTree = "<group>"; };
+		DB37D8962271CBBA00BBE88C /* ICEFORCEFollowOnTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ICEFORCEFollowOnTableViewCell.xib; sourceTree = "<group>"; };
+		DB37D89B2271CE5D00BBE88C /* ICEFORCEFollowOnModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEFollowOnModel.h; sourceTree = "<group>"; };
+		DB37D89C2271CE5D00BBE88C /* ICEFORCEFollowOnModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEFORCEFollowOnModel.m; sourceTree = "<group>"; };
 		DB436FBB22682322006134CF /* ICEFORCEPersonListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEPersonListViewController.h; sourceTree = "<group>"; };
 		DB436FBC22682322006134CF /* ICEFORCEPersonListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEFORCEPersonListViewController.m; sourceTree = "<group>"; };
 		DB436FC022682E05006134CF /* ICEFORCEPersonListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEFORCEPersonListTableViewCell.h; sourceTree = "<group>"; };
@@ -15024,6 +15041,37 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DB1EFD102271C8B900B62661 /* FollowOnProject */ = {
+			isa = PBXGroup;
+			children = (
+				DB37D89A2271CE4B00BBE88C /* Model */,
+				DB37D8992271CBCC00BBE88C /* View */,
+				DB1EFD152271C8F700B62661 /* FollowOn_Group */,
+				DB1EFD142271C8F500B62661 /* FollowOn_Personal */,
+				DB1EFD112271C8E800B62661 /* ICEFORCEFollowOnViewController.h */,
+				DB1EFD122271C8E800B62661 /* ICEFORCEFollowOnViewController.m */,
+			);
+			path = FollowOnProject;
+			sourceTree = "<group>";
+		};
+		DB1EFD142271C8F500B62661 /* FollowOn_Personal */ = {
+			isa = PBXGroup;
+			children = (
+				DB37D8912271CA6C00BBE88C /* ICEFORCEFollowOnPersonalViewController.h */,
+				DB37D8922271CA6C00BBE88C /* ICEFORCEFollowOnPersonalViewController.m */,
+			);
+			path = FollowOn_Personal;
+			sourceTree = "<group>";
+		};
+		DB1EFD152271C8F700B62661 /* FollowOn_Group */ = {
+			isa = PBXGroup;
+			children = (
+				DB1EFD1C2271CA2700B62661 /* ICEFORCEFollowOnGroupViewController.h */,
+				DB1EFD1D2271CA2700B62661 /* ICEFORCEFollowOnGroupViewController.m */,
+			);
+			path = FollowOn_Group;
+			sourceTree = "<group>";
+		};
 		DB2EA20122675B43004B8D71 /* ProjectShare */ = {
 			isa = PBXGroup;
 			children = (
@@ -15031,6 +15079,25 @@
 				DB2EA20622675D19004B8D71 /* ICEFORCEProjectShareViewController.m */,
 			);
 			path = ProjectShare;
+			sourceTree = "<group>";
+		};
+		DB37D8992271CBCC00BBE88C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB37D8942271CBBA00BBE88C /* ICEFORCEFollowOnTableViewCell.h */,
+				DB37D8952271CBBA00BBE88C /* ICEFORCEFollowOnTableViewCell.m */,
+				DB37D8962271CBBA00BBE88C /* ICEFORCEFollowOnTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB37D89A2271CE4B00BBE88C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB37D89B2271CE5D00BBE88C /* ICEFORCEFollowOnModel.h */,
+				DB37D89C2271CE5D00BBE88C /* ICEFORCEFollowOnModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DB436FBE22682339006134CF /* PersonnelList */ = {
@@ -15212,6 +15279,7 @@
 		DB4C6B1C226021790027DEAF /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				DB1EFD102271C8B900B62661 /* FollowOnProject */,
 				DB1EFB9E2271548200B62661 /* AlreadyInvestedProject */,
 				DB4C6B1D226021BF0027DEAF /* QZProject */,
 			);
@@ -15702,6 +15770,7 @@
 				DBDF7DE8226C54920001AAD1 /* ICEFORCEScoreHeadView.xib in Resources */,
 				A4A4B5CC1FC54D9A008D17BC /* tab_work_off@3x.png in Resources */,
 				142ABC241FA173D200514139 /* logiaddress@2x.png in Resources */,
+				DB37D8982271CBBA00BBE88C /* ICEFORCEFollowOnTableViewCell.xib in Resources */,
 				10748D9620CA155F005D1B43 /* icon_password@2x.png in Resources */,
 				A4A4B5C81FC421FE008D17BC /* tab_work@2x.png in Resources */,
 				DB436FE422688CFE006134CF /* ICEFORCEPotentialDetailTopHeadView.xib in Resources */,
@@ -16476,6 +16545,7 @@
 				10269EC61F1DA89100CBB019 /* SDChattingSystemNotifyCell.m in Sources */,
 				801ADFFD20ABD4E8008B1FF5 /* CXBussinessTripListViewController.m in Sources */,
 				01258A471B07015100DEBAE1 /* UIScrollView+MJExtension.m in Sources */,
+				DB37D8972271CBBA00BBE88C /* ICEFORCEFollowOnTableViewCell.m in Sources */,
 				1020281A1CB897EA006C9A5B /* split.c in Sources */,
 				801AE00520AC0459008B1FF5 /* CXBussinessTripListCell.m in Sources */,
 				47503EE91CE968F900FF9DD8 /* NSObject+YYAdd.m in Sources */,
@@ -16689,6 +16759,7 @@
 				103CC8AD1FEA0EB5009753E6 /* CXIDGBasicInformationModel.m in Sources */,
 				295F7E441AFA0198003FE925 /* SDCompanyUserModel.m in Sources */,
 				01A408341AF8B39A00F2545A /* SDDataBaseHelper.m in Sources */,
+				DB1EFD132271C8E800B62661 /* ICEFORCEFollowOnViewController.m in Sources */,
 				10269ECF1F1DA89100CBB019 /* SDConversationCell.m in Sources */,
 				102028171CB897EA006C9A5B /* qrinput.c in Sources */,
 				10269EEB1F1DA89100CBB019 /* CXWorkHomeViewController.m in Sources */,
@@ -16709,6 +16780,7 @@
 				103CC8B71FEA4B17009753E6 /* CXIDGInvestmentProgramListModel.m in Sources */,
 				106617B4205F505700B88DDC /* CXFeeTableViewCell.m in Sources */,
 				108DB1E91FA709A90023A3B0 /* CXApprovalPersonModel.m in Sources */,
+				DB37D89D2271CE5D00BBE88C /* ICEFORCEFollowOnModel.m in Sources */,
 				10269EE01F1DA89100CBB019 /* SDIMMyselfViewController.m in Sources */,
 				10D7D29C20ECCA1500FAE414 /* CXDDXVoiceMeetingDetailUserModel.m in Sources */,
 				108DB1D91FA6CE9D0023A3B0 /* CXStatementOfAffairsViewController.m in Sources */,
@@ -16933,6 +17005,7 @@
 				DBE60FA3225C4899006064FD /* ICEFORCEProjectViewController.m in Sources */,
 				107AC2821FF392AD008C4D1D /* CXIDGMessageListContentModel.m in Sources */,
 				296FDDE61C195B5C009CEDF7 /* CodedOutputStream.m in Sources */,
+				DB1EFD1E2271CA2700B62661 /* ICEFORCEFollowOnGroupViewController.m in Sources */,
 				105B684A200629A500372D00 /* CXIDGAnnualLuckyDrawQDCodeViewController.m in Sources */,
 				10269E9A1F1DA89100CBB019 /* CXFocusSignEditViewController.m in Sources */,
 				80FA43FB20BBFA2700795490 /* CXHouseProjectMeetingViewController.m in Sources */,
@@ -17370,6 +17443,7 @@
 				16A9084097C953AF860BFA15 /* CXTopScrollView.m in Sources */,
 				801AE00920AC1F6B008B1FF5 /* CXBussinessTripEditViewController.m in Sources */,
 				16A90FEFEB1D39862FA8193B /* CXTopScrollSubView.m in Sources */,
+				DB37D8932271CA6C00BBE88C /* ICEFORCEFollowOnPersonalViewController.m in Sources */,
 				16A909FE5A3CB8D5D0EC3131 /* CXBasicDataListViewController.m in Sources */,
 				1097D36E20E1DD9200BF8A0D /* CXIDGTZGGYHListTableViewCell.m in Sources */,
 				10E4A1692004569E0023921A /* CXPrizeOwnerListModel.m in Sources */,

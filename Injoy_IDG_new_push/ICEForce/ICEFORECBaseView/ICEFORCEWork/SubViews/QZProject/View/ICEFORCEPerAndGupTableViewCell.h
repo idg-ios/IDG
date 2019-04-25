@@ -15,7 +15,7 @@
 
 @optional
 //后面的字符串只是暂时添加 存在真实数据后 在修改
-- (void)showStateCell:(ICEFORCEPerAndGupTableViewCell *)cell selectModel:(ICEFORCEPotentialProjectmModel *)model;
+- (void)showStateCell:(ICEFORCEPerAndGupTableViewCell *)cell selectModel:(ICEFORCEPotentialProjectmModel *)model selectButton:(UIButton *)selecButton;
 
 @end
 

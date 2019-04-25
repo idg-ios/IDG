@@ -23,7 +23,7 @@
 #import "ICEFORCENewlyAddPotentialProjectViewController.h"
 
 #import "ICEFORCEAlreadyInvestedRootViewController.h"
-
+#import "ICEFORCEFollowOnViewController.h"
 
 #import "ICEFORCEPotentialDetailViewController.h"
 #import "ICEFORCEPotentialProjectmModel.h"
@@ -288,6 +288,8 @@
             break;
         case 102:{
             
+            ICEFORCEFollowOnViewController *followOn = [[ICEFORCEFollowOnViewController alloc]init];
+            [self.navigationController pushViewController:followOn animated:YES];
         }
             break;
         case 103:{

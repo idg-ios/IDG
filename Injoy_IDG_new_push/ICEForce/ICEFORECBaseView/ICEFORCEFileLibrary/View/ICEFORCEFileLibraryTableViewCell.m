@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *groupLabel;
 @property (weak, nonatomic) IBOutlet UILabel *projectNameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *projecyTagButton;
-@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+@property (weak, nonatomic) IBOutlet UIButton *userNameButton;
 @property (weak, nonatomic) IBOutlet UIButton *projectStateButton;
 @property (weak, nonatomic) IBOutlet UIButton *projectInButton;
 @property (weak, nonatomic) IBOutlet UILabel *projectContLabell;
@@ -54,7 +54,7 @@
         [self.projecyTagButton setTitle:model.projInvestedStatus forState:(UIControlStateNormal)];
     }
     
-    self.userNameLabel.text = model.projManagerNames;
+    [self.userNameButton setTitle:model.projManagerNames forState:(UIControlStateNormal)];
     
     if ([MyPublicClass stringIsNull:model.comInduStr] && [MyPublicClass stringIsNull:model.stsIdStr]) {
         self.projectStateButton.hidden = YES;
@@ -66,10 +66,10 @@
         [self.projectStateButton setTitle: [NSString stringWithFormat:@"  %@  ",model.stsIdStr] forState:(UIControlStateNormal)];
     }else if (![MyPublicClass stringIsNull:model.comInduStr] && [MyPublicClass stringIsNull:model.stsIdStr]){
         
-        self.projectStateButton.hidden = NO;
-        self.projectInButton.hidden = YES;
+        self.projectStateButton.hidden = YES;
+        self.projectInButton.hidden = NO;
         
-        [self.projectStateButton setTitle:[NSString stringWithFormat:@"  %@  ",model.comIndu] forState:(UIControlStateNormal)];
+        [self.projectInButton setTitle:[NSString stringWithFormat:@"  %@  ",model.comIndu] forState:(UIControlStateNormal)];
     }else{
         
         self.projectStateButton.hidden = NO;

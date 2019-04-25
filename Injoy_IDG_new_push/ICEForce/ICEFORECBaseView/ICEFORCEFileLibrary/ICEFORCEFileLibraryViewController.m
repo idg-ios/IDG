@@ -31,6 +31,8 @@
 @property (nonatomic ,strong) NSString *stsId;
 /** 行业状态 - 用于刷新 */
 @property (nonatomic ,strong) NSString *projInvestedStatus;
+/** 成员或者项目负责人姓名 */
+@property (nonatomic ,strong) NSString *projManagers;
 
 @end
 
@@ -62,7 +64,7 @@
     
     self.pageNumber = 1;
     
-    self.tableView = [[UITableView alloc]initWithFrame:(CGRectMake(0, CGRectGetMaxY(rootTopView.frame), self.view.frame.size.width, Screen_Height-CGRectGetMaxY(rootTopView.frame)-K_Height_NavBar)) style:(UITableViewStylePlain)];
+    self.tableView = [[UITableView alloc]initWithFrame:(CGRectMake(0, CGRectGetMaxY(rootTopView.frame), self.view.frame.size.width, self.view.frame.size.height-CGRectGetMaxY(rootTopView.frame)-K_Height_TabBar)) style:(UITableViewStylePlain)];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -78,6 +80,7 @@
         weakSelf.comIndu = nil;
         weakSelf.projInvestedStatus = nil;
         weakSelf.stsId = nil;
+        weakSelf.projManagers = nil;
         [weakSelf reloadData];
     }];
     [self.tableView addLegendFooterWithRefreshingBlock:^{
@@ -138,26 +141,29 @@
 -(void)showAlreadyRootCell:(ICEFORCEFileLibraryTableViewCell *)cell selectModel:(ICEFORCEFileLibraryModel *)model selectButton:(UIButton *)sender{
     NSString *btTitle = sender.currentTitle;
     btTitle = [btTitle stringByReplacingOccurrencesOfString:@" " withString:@""];
-
+    
     switch (sender.tag) {
         case 101:{
             if ([btTitle isEqualToString:[NSString stringWithFormat:@"%@",model.stsIdStr]]) {
-                self.comIndu = nil;
-                self.projInvestedStatus = nil;
+//                self.comIndu = nil;
+//                self.projInvestedStatus = nil;
+//                self.projManagers = nil;
                 self.stsId = model.stsId;
             }
             if ([btTitle isEqualToString:[NSString stringWithFormat:@"%@",model.comInduStr]]) {
-                self.projInvestedStatus = nil;
-                self.stsId = nil;
-                  self.comIndu = model.comIndu;
+//                self.projInvestedStatus = nil;
+//                self.stsId = nil;
+//                self.projManagers = nil;
+                self.comIndu = model.comIndu;
             }
-          
+            
             [self reloadData];
         }
             break;
         case 102:{
-            self.comIndu = nil;
-            self.stsId = nil;
+//            self.comIndu = nil;
+//            self.stsId = nil;
+//            self.projManagers = nil;
             self.projInvestedStatus = model.projInvestedStatus;
             [self reloadData];
         }
@@ -165,19 +171,28 @@
         case 103:{
             
             if ([btTitle isEqualToString:[NSString stringWithFormat:@"%@",model.stsIdStr]]) {
-                self.comIndu = nil;
-                self.projInvestedStatus = nil;
+//                self.comIndu = nil;
+//                self.projInvestedStatus = nil;
+//                self.projManagers = nil;
                 self.stsId = model.stsId;
             }
             if ([btTitle isEqualToString:[NSString stringWithFormat:@"%@",model.comInduStr]]) {
-                self.projInvestedStatus = nil;
-                self.stsId = nil;
+//                self.projInvestedStatus = nil;
+//                self.stsId = nil;
+//                self.projManagers = nil;
                 self.comIndu = model.comIndu;
             }
             
             [self reloadData];
         }
             break;
+        case 104:{
+//            self.projInvestedStatus = nil;
+//            self.stsId = nil;
+//            self.comIndu = nil;
+            self.projManagers = model.projManagers;
+            [self reloadData];
+        }
         default:
             break;
     }
@@ -196,6 +211,7 @@
     [dic setValue:self.comIndu forKey:@"comIndu"];
     [dic setValue:self.projInvestedStatus forKey:@"projInvestedStatus"];
     [dic setValue:self.stsId forKey:@"stsId"];
+    [dic setValue:self.projManagers forKey:@"projManagers"];
     
     [MBProgressHUD showHUDForView:self.view text:@"请稍候..."];
     [HttpTool postWithPath:POST_PROJ_Query_AllProj params:dic success:^(id JSON) {

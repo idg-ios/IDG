@@ -16,6 +16,10 @@
 #import "HttpTool.h"
 #import "MJRefresh.h"
 #import "MBProgressHUD+CXCategory.h"
+#import "YCXMenu.h"
+
+
+
 
 @interface ICEFORCEPotentialPersonalViewController ()<UITableViewDelegate,UITableViewDataSource,ICEFORCEPotentialProjectDelegate>{
     float total;
@@ -168,9 +172,49 @@
     }];
 }
 
--(void)showStateCell:(ICEFORCEPerAndGupTableViewCell *)cell selectModel:(ICEFORCEPotentialProjectmModel *)model{
-    self.subStsId = model.stsId;
-    [self reloadData];
+-(void)showStateCell:(ICEFORCEPerAndGupTableViewCell *)cell selectModel:(ICEFORCEPotentialProjectmModel *)model selectButton:(UIButton *)selecButton{
+    switch (selecButton.tag) {
+        case 101:{
+            self.subStsId = model.stsId;
+            [self reloadData];
+        }
+            break;
+        case 102:{
+            NSArray *array;
+            if (model.followUpStatus.integerValue == 0) {
+               
+                array = @[[YCXMenuItem menuItem:@"跟踪" image:[UIImage imageNamed:@"half_star"] tag:101 userInfo:@{@"title":@"gz"}],
+                          [YCXMenuItem menuItem:@"重点跟踪" image:[UIImage imageNamed:@"full_star"] tag:102 userInfo:@{@"title":@"zd"}]
+                          ];
+                
+            }else if (model.followUpStatus.integerValue == 1){
+              
+                array = @[[YCXMenuItem menuItem:@"跟踪" image:[UIImage imageNamed:@"half_star"] tag:101 userInfo:@{@"title":@"gz"}],
+                          [YCXMenuItem menuItem:@"取消跟踪" image:[UIImage imageNamed:@"blank_star"] tag:102 userInfo:@{@"title":@"zd"}]
+                          ];
+                
+            }else{
+                array = @[[YCXMenuItem menuItem:@"重点跟踪" image:[UIImage imageNamed:@"full_star"] tag:101 userInfo:@{@"title":@"gz"}],
+                          [YCXMenuItem menuItem:@"取消跟踪" image:[UIImage imageNamed:@"blank_star"] tag:102 userInfo:@{@"title":@"zd"}]
+                          ];
+            }
+            
+           
+//            CXWeakSelf(self);
+            [YCXMenu showMenuInView:self.view fromRect:CGRectMake(selecButton.frame.origin.x+15, cell.frame.origin.y+30, 10, 20) menuItems:array selected:^(NSInteger index, YCXMenuItem *item) {
+                
+                
+                
+            }];
+            [YCXMenu setTitleFont:[UIFont systemFontOfSize:14]];
+            
+            
+        }
+            break;
+        default:
+            break;
+    }
+  
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

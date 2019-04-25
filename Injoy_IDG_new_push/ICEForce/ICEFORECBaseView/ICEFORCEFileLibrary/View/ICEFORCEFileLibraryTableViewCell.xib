@@ -76,15 +76,6 @@
                                     <action selector="stateClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RrF-AB-eFh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM7-Zx-QHW">
-                                <rect key="frame" x="272.5" y="7" width="12.5" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="D3U-0S-gX2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.94117647059999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5K3-mK-40z">
                                 <rect key="frame" x="124" y="35" width="43" height="20"/>
                                 <constraints>
@@ -98,20 +89,33 @@
                                     <action selector="stateClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="CEW-nX-RlQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHh-gf-oCx">
+                                <rect key="frame" x="247" y="7" width="38" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Z58-uQ-bsj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.94117647059999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stateClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="AGD-QZ-fbZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="9td-YM-qYG" secondAttribute="trailing" id="4ht-SC-NZU"/>
                             <constraint firstItem="HIA-C0-yov" firstAttribute="centerY" secondItem="rPh-nK-5N8" secondAttribute="centerY" id="5m2-xG-PWV"/>
+                            <constraint firstItem="eHh-gf-oCx" firstAttribute="centerY" secondItem="FNV-bF-96v" secondAttribute="centerY" id="6v2-GZ-xEs"/>
                             <constraint firstItem="5K3-mK-40z" firstAttribute="leading" secondItem="ltI-ri-2jI" secondAttribute="trailing" constant="5" id="DwR-0P-gpj"/>
                             <constraint firstItem="HIA-C0-yov" firstAttribute="leading" secondItem="rPh-nK-5N8" secondAttribute="leading" constant="15" id="HIm-da-aDu"/>
+                            <constraint firstAttribute="trailing" secondItem="eHh-gf-oCx" secondAttribute="trailing" constant="15" id="NDJ-5r-IXy"/>
                             <constraint firstItem="B9G-Ps-uaZ" firstAttribute="leading" secondItem="FNV-bF-96v" secondAttribute="trailing" constant="8" id="XeX-Pr-rbV"/>
                             <constraint firstItem="5K3-mK-40z" firstAttribute="centerY" secondItem="rPh-nK-5N8" secondAttribute="centerY" id="ahR-GW-60X"/>
                             <constraint firstItem="ltI-ri-2jI" firstAttribute="top" secondItem="FNV-bF-96v" secondAttribute="bottom" constant="8" id="bDK-s3-1mk"/>
-                            <constraint firstAttribute="trailing" secondItem="fM7-Zx-QHW" secondAttribute="trailing" constant="15" id="bmV-Fd-oZr"/>
                             <constraint firstItem="9td-YM-qYG" firstAttribute="top" secondItem="ltI-ri-2jI" secondAttribute="bottom" constant="8" id="fcE-bQ-QbR"/>
                             <constraint firstItem="9td-YM-qYG" firstAttribute="leading" secondItem="HIA-C0-yov" secondAttribute="trailing" constant="15" id="ix9-kL-zDI"/>
-                            <constraint firstItem="fM7-Zx-QHW" firstAttribute="centerY" secondItem="FNV-bF-96v" secondAttribute="centerY" id="mQg-sQ-aNb"/>
                             <constraint firstItem="ltI-ri-2jI" firstAttribute="centerY" secondItem="rPh-nK-5N8" secondAttribute="centerY" id="mgC-Jt-pKY"/>
                             <constraint firstItem="B9G-Ps-uaZ" firstAttribute="centerY" secondItem="FNV-bF-96v" secondAttribute="centerY" id="piS-mL-UlN"/>
                             <constraint firstItem="FNV-bF-96v" firstAttribute="leading" secondItem="HIA-C0-yov" secondAttribute="trailing" constant="15" id="s14-Ft-CqD"/>
@@ -134,7 +138,7 @@
                 <outlet property="projectNameLabel" destination="FNV-bF-96v" id="ZIl-EP-7cp"/>
                 <outlet property="projectStateButton" destination="ltI-ri-2jI" id="tJx-QC-dFt"/>
                 <outlet property="projecyTagButton" destination="B9G-Ps-uaZ" id="9Wd-IP-zEU"/>
-                <outlet property="userNameLabel" destination="fM7-Zx-QHW" id="f64-Wr-VAW"/>
+                <outlet property="userNameButton" destination="eHh-gf-oCx" id="UOV-dV-7oB"/>
             </connections>
         </tableViewCell>
     </objects>
