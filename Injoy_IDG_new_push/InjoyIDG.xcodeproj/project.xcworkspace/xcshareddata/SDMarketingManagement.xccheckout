@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BB3A0734-D0A9-4141-886D-F5445CFCC4DF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SDMarketingManagement</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>62df4b30-7901-4147-ba6a-e1b9c63aef87++1258</key>
+		<string>https://192.168.101.11/svn/project/trunk/SDMarketingManagement-IM</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SDMarketingManagement/SDMarketingManagement.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>62df4b30-7901-4147-ba6a-e1b9c63aef87++1258</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>62df4b30-7901-4147-ba6a-e1b9c63aef87++1258</key>
+		<string>https://192.168.101.11/svn/project</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://192.168.101.11/svn/project/trunk/SDMarketingManagement-IM/SDMarketingManagement/SDMarketingManagement.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>62df4b30-7901-4147-ba6a-e1b9c63aef87++1258</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>62df4b30-7901-4147-ba6a-e1b9c63aef87++1258</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SDMarketingManagement-IM</string>
+		</dict>
+	</array>
+</dict>
+</plist>

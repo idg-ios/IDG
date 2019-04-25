@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "62df4b30-7901-4147-ba6a-e1b9c63aef87++8991",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "62df4b30-7901-4147-ba6a-e1b9c63aef87++8991" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "62df4b30-7901-4147-ba6a-e1b9c63aef87++8991" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "01A48F8B-6AEC-4847-A9C2-6EB4596C3D36",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "62df4b30-7901-4147-ba6a-e1b9c63aef87++8991" : "injoyERPCRM\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "InjoyERP",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "InjoyERP.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.101.136:8443\/svn\/project",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "62df4b30-7901-4147-ba6a-e1b9c63aef87++8991"
+    }
+  ]
+}

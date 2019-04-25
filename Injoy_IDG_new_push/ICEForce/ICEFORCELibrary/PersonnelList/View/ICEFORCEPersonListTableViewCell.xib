@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ICEFORCEPersonListTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLb-cY-GBq">
+                        <rect key="frame" x="0.0" y="0.0" width="40" height="48.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="AQ6-IO-aQO"/>
+                        </constraints>
+                        <state key="normal" image="outSelected.png"/>
+                        <state key="selected" image="onSelected.png"/>
+                        <connections>
+                            <action selector="selectRow:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="E1h-PV-mRV"/>
+                        </connections>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeaveToSubmit" translatesAutoresizingMaskIntoConstraints="NO" id="Dd3-ob-vea">
+                        <rect key="frame" x="40" y="0.0" width="40" height="48.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="ZUa-18-YQm"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgO-7S-3Aj">
+                        <rect key="frame" x="90" y="14.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBc-6r-bmV">
+                        <rect key="frame" x="15" y="48.5" width="290" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="kza-Qh-61J"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MBc-6r-bmV" firstAttribute="top" secondItem="Dd3-ob-vea" secondAttribute="bottom" id="1vv-TD-JQM"/>
+                    <constraint firstItem="Dd3-ob-vea" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CKa-8y-VHz"/>
+                    <constraint firstItem="WgO-7S-3Aj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DcO-co-bYK"/>
+                    <constraint firstItem="MBc-6r-bmV" firstAttribute="top" secondItem="kLb-cY-GBq" secondAttribute="bottom" id="JUA-mh-k1y"/>
+                    <constraint firstItem="kLb-cY-GBq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="MJz-6G-L9D"/>
+                    <constraint firstAttribute="bottom" secondItem="MBc-6r-bmV" secondAttribute="bottom" id="MeV-Vs-Yxn"/>
+                    <constraint firstItem="WgO-7S-3Aj" firstAttribute="leading" secondItem="Dd3-ob-vea" secondAttribute="trailing" constant="10" id="alE-CF-ZVX"/>
+                    <constraint firstItem="Dd3-ob-vea" firstAttribute="leading" secondItem="kLb-cY-GBq" secondAttribute="trailing" id="cBH-7h-Mx7"/>
+                    <constraint firstAttribute="trailing" secondItem="MBc-6r-bmV" secondAttribute="trailing" constant="15" id="iW6-1y-iTP"/>
+                    <constraint firstItem="MBc-6r-bmV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="nO2-ah-Sgv"/>
+                    <constraint firstItem="kLb-cY-GBq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xQr-U5-UFJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="selectButton" destination="kLb-cY-GBq" id="G37-Db-MAc"/>
+                <outlet property="userImageView" destination="Dd3-ob-vea" id="PZe-ou-Kte"/>
+                <outlet property="userName" destination="WgO-7S-3Aj" id="ytK-RO-OE9"/>
+            </connections>
+            <point key="canvasLocation" x="44.927536231884062" y="53.571428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="LeaveToSubmit" width="36" height="36"/>
+        <image name="onSelected.png" width="28.5" height="28.5"/>
+        <image name="outSelected.png" width="22" height="22"/>
+    </resources>
+</document>

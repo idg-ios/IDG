@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CXShareView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RcK-dI-mpd" userLabel="主内容view">
+                    <rect key="frame" x="0.0" y="487" width="375" height="180"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分享到" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juo-11-ojw" userLabel="分享标题">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                            <color key="backgroundColor" red="0.76470588235294112" green="0.75686274509803919" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="MO9-Sa-Y06"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLj-Wx-NQu" userLabel="分享按钮">
+                            <rect key="frame" x="0.0" y="40" width="375" height="100"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ki-Es-BkK" customClass="CXShareButton">
+                                    <rect key="frame" x="52" y="20" width="60" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <state key="normal" title="新浪微博" image="share_weibo">
+                                        <color key="titleColor" red="0.41960784313725491" green="0.41960784313725491" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                            <size key="value" width="38" height="38"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="shareToSinaWeibo:" destination="iN0-l3-epB" eventType="touchUpInside" id="5DK-Ru-eyw"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIM-1K-gQH" customClass="CXShareButton">
+                                    <rect key="frame" x="120" y="20" width="60" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <state key="normal" title="微信好友" image="share_friends">
+                                        <color key="titleColor" red="0.41960784313725491" green="0.41960784313725491" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                            <size key="value" width="38" height="38"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="shareToWechatFriend:" destination="iN0-l3-epB" eventType="touchUpInside" id="CQB-ON-V2S"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xar-kM-P4X" customClass="CXShareButton">
+                                    <rect key="frame" x="188" y="20" width="60" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <state key="normal" title="微信朋友圈" image="share_timeline">
+                                        <color key="titleColor" red="0.41960784309999999" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="imageSize">
+                                            <size key="value" width="38" height="38"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="shareToWechatTimeline:" destination="iN0-l3-epB" eventType="touchUpInside" id="EFI-Vp-Uif"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="gcb-Qk-ldI"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXx-k5-nfy" userLabel="底部视图">
+                            <rect key="frame" x="0.0" y="140" width="375" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgF-iT-CJC" userLabel="取消按钮">
+                                    <rect key="frame" x="153" y="5" width="70" height="30"/>
+                                    <color key="backgroundColor" red="0.76470588235294112" green="0.75686274509803919" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="ZiZ-Oj-CeK"/>
+                                        <constraint firstAttribute="width" constant="70" id="g1G-tg-ir3"/>
+                                    </constraints>
+                                    <state key="normal" title="取消">
+                                        <color key="titleColor" red="0.81568627450980391" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="cancelBtnTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="WAq-Cb-UZr"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="ZgF-iT-CJC" firstAttribute="centerY" secondItem="iXx-k5-nfy" secondAttribute="centerY" id="8Gr-wY-yMM"/>
+                                <constraint firstAttribute="height" constant="40" id="Rxc-NH-UZT"/>
+                                <constraint firstItem="ZgF-iT-CJC" firstAttribute="centerX" secondItem="iXx-k5-nfy" secondAttribute="centerX" id="cfw-Se-pCn"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="juo-11-ojw" firstAttribute="top" secondItem="RcK-dI-mpd" secondAttribute="top" id="8oq-5q-qst"/>
+                        <constraint firstItem="iXx-k5-nfy" firstAttribute="top" secondItem="jLj-Wx-NQu" secondAttribute="bottom" id="AHi-3v-rf8"/>
+                        <constraint firstAttribute="trailing" secondItem="jLj-Wx-NQu" secondAttribute="trailing" id="G45-7q-sAU"/>
+                        <constraint firstItem="jLj-Wx-NQu" firstAttribute="leading" secondItem="RcK-dI-mpd" secondAttribute="leading" id="KUr-Lp-XZh"/>
+                        <constraint firstAttribute="bottom" secondItem="iXx-k5-nfy" secondAttribute="bottom" id="Nbt-1b-CFj"/>
+                        <constraint firstItem="iXx-k5-nfy" firstAttribute="leading" secondItem="RcK-dI-mpd" secondAttribute="leading" id="ROE-TW-EUB"/>
+                        <constraint firstItem="juo-11-ojw" firstAttribute="leading" secondItem="RcK-dI-mpd" secondAttribute="leading" id="U0l-Ds-Cl3"/>
+                        <constraint firstAttribute="trailing" secondItem="juo-11-ojw" secondAttribute="trailing" id="YKQ-ya-ReA"/>
+                        <constraint firstAttribute="trailing" secondItem="iXx-k5-nfy" secondAttribute="trailing" id="dQH-1q-P4f"/>
+                        <constraint firstItem="jLj-Wx-NQu" firstAttribute="top" secondItem="juo-11-ojw" secondAttribute="bottom" id="zu6-BT-ICO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="RcK-dI-mpd" secondAttribute="trailing" id="0Y3-Rd-XTq"/>
+                <constraint firstItem="RcK-dI-mpd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bQ1-vy-qe9"/>
+                <constraint firstItem="RcK-dI-mpd" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="zd1-qf-R4W"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <connections>
+                <outlet property="buttonView" destination="jLj-Wx-NQu" id="sGs-bE-Tbx"/>
+                <outlet property="cancelButton" destination="ZgF-iT-CJC" id="Ts9-PR-Yic"/>
+                <outlet property="cancelButtonHeightConstraint" destination="ZiZ-Oj-CeK" id="gvH-Ar-jmk"/>
+                <outlet property="cancelButtonWidthConstraint" destination="g1G-tg-ir3" id="8BD-JT-UCL"/>
+                <outlet property="contentView" destination="RcK-dI-mpd" id="Xqd-ja-1LC"/>
+                <outlet property="contentViewBottomConstraint" destination="zd1-qf-R4W" id="S0p-V7-XvG"/>
+                <outlet property="footerView" destination="iXx-k5-nfy" id="jNP-Pq-ml5"/>
+                <outlet property="footerViewHeightConstraint" destination="Rxc-NH-UZT" id="sk0-pF-fGu"/>
+                <outlet property="timelineButton" destination="xar-kM-P4X" id="FjW-nt-adO"/>
+                <outlet property="titleLabel" destination="juo-11-ojw" id="vaw-mK-smO"/>
+                <outlet property="titleLabelHeightConstraint" destination="MO9-Sa-Y06" id="QAq-NP-mrE"/>
+                <outlet property="wechatButton" destination="mIM-1K-gQH" id="CfU-c3-jU6"/>
+                <outlet property="weiboButton" destination="9ki-Es-BkK" id="o6a-pX-9Gy"/>
+            </connections>
+            <point key="canvasLocation" x="325.5" y="382.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="share_friends" width="38" height="38"/>
+        <image name="share_timeline" width="38" height="38"/>
+        <image name="share_weibo" width="38" height="38"/>
+    </resources>
+</document>

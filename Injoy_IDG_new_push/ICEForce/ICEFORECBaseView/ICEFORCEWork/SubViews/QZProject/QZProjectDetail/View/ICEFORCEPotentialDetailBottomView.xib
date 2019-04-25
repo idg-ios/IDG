@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ICEFORCEPotentialDetailBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcR-XX-T99">
+                    <rect key="frame" x="0.0" y="50" width="123.5" height="50"/>
+                    <color key="backgroundColor" red="0.30980392156862746" green="0.43137254901960786" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0I8-sL-lYO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="新增跟踪进展">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXt-XY-pSG">
+                    <rect key="frame" x="125.5" y="50" width="124" height="50"/>
+                    <color key="backgroundColor" red="0.30980392156862746" green="0.43137254901960786" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="3zk-5z-h31"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="上传文档">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="项目状态:持续进展" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMZ-eg-ROz">
+                    <rect key="frame" x="87.5" y="10" width="200" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="4kx-Nz-ihH"/>
+                        <constraint firstAttribute="width" constant="200" id="9HO-qG-aPu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVM-Yt-rdz">
+                    <rect key="frame" x="251.5" y="50" width="123.5" height="50"/>
+                    <color key="backgroundColor" red="0.30980392156862746" green="0.43137254901960786" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="REx-hF-nUK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="变更项目状态">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="NcR-XX-T99" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7iB-k1-Dha"/>
+                <constraint firstAttribute="bottom" secondItem="KXt-XY-pSG" secondAttribute="bottom" id="920-bQ-WWZ"/>
+                <constraint firstAttribute="bottom" secondItem="NcR-XX-T99" secondAttribute="bottom" id="LCW-QS-0xo"/>
+                <constraint firstAttribute="bottom" secondItem="cVM-Yt-rdz" secondAttribute="bottom" id="QDW-q2-Wme"/>
+                <constraint firstItem="cVM-Yt-rdz" firstAttribute="width" secondItem="NcR-XX-T99" secondAttribute="width" id="QTh-Iq-Lhq"/>
+                <constraint firstItem="KXt-XY-pSG" firstAttribute="leading" secondItem="NcR-XX-T99" secondAttribute="trailing" constant="2" id="Tej-Bz-gY4"/>
+                <constraint firstAttribute="trailing" secondItem="cVM-Yt-rdz" secondAttribute="trailing" id="TjN-o0-4lz"/>
+                <constraint firstItem="KXt-XY-pSG" firstAttribute="height" secondItem="NcR-XX-T99" secondAttribute="height" id="cBI-Q7-Q96"/>
+                <constraint firstItem="hMZ-eg-ROz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="d0p-cn-gNo"/>
+                <constraint firstItem="cVM-Yt-rdz" firstAttribute="leading" secondItem="KXt-XY-pSG" secondAttribute="trailing" constant="2" id="h3F-sQ-DkR"/>
+                <constraint firstItem="cVM-Yt-rdz" firstAttribute="height" secondItem="NcR-XX-T99" secondAttribute="height" id="thj-Xa-ZEJ"/>
+                <constraint firstItem="KXt-XY-pSG" firstAttribute="width" secondItem="NcR-XX-T99" secondAttribute="width" id="wix-s6-SuG"/>
+                <constraint firstItem="hMZ-eg-ROz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yVy-y5-qjj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addButton" destination="NcR-XX-T99" id="8QQ-fz-zCB"/>
+                <outlet property="changeStateButton" destination="cVM-Yt-rdz" id="zKx-6t-fml"/>
+                <outlet property="stateLabel" destination="hMZ-eg-ROz" id="GHi-d5-M1v"/>
+                <outlet property="updateBuutton" destination="KXt-XY-pSG" id="3v2-Ry-Tl7"/>
+            </connections>
+        </view>
+    </objects>
+</document>

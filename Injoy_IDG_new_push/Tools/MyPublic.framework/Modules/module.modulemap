@@ -1,0 +1,6 @@
+framework module MyPublic {
+  umbrella header "MyPublic.h"
+
+  export *
+  module * { export * }
+}

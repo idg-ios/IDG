@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "62df4b30-7901-4147-ba6a-e1b9c63aef87++9611",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "62df4b30-7901-4147-ba6a-e1b9c63aef87++9611" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "62df4b30-7901-4147-ba6a-e1b9c63aef87++9611" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "221BC6B1-9A70-4CF6-BB8D-35A927262771",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "62df4b30-7901-4147-ba6a-e1b9c63aef87++9611" : "InjoyDDX_WBG\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "InjoyDDXWBG",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "InjoyDDXWBG.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.101.136:8443\/svn\/project",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "62df4b30-7901-4147-ba6a-e1b9c63aef87++9611"
+    }
+  ]
+}

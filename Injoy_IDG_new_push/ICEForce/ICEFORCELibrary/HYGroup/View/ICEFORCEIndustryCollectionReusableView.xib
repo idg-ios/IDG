@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ICEFORCEIndustryCollectionReusableView" id="U6b-Vx-4bR" customClass="ICEFORCEIndustryCollectionReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLT-fu-Qer">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I73-jp-0tV">
+                            <rect key="frame" x="10" y="0.0" width="310" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZ9-GE-CMi">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="I73-jp-0tV" firstAttribute="leading" secondItem="XLT-fu-Qer" secondAttribute="leading" constant="10" id="0kE-sh-7cz"/>
+                        <constraint firstAttribute="bottom" secondItem="SZ9-GE-CMi" secondAttribute="bottom" id="4J3-oS-giv"/>
+                        <constraint firstItem="SZ9-GE-CMi" firstAttribute="leading" secondItem="XLT-fu-Qer" secondAttribute="leading" id="LEI-Nc-PZC"/>
+                        <constraint firstItem="I73-jp-0tV" firstAttribute="top" secondItem="XLT-fu-Qer" secondAttribute="top" id="VMf-9h-CAd"/>
+                        <constraint firstItem="SZ9-GE-CMi" firstAttribute="top" secondItem="XLT-fu-Qer" secondAttribute="top" id="bR2-60-VXk"/>
+                        <constraint firstAttribute="trailing" secondItem="I73-jp-0tV" secondAttribute="trailing" id="dZD-1d-Ivo"/>
+                        <constraint firstAttribute="trailing" secondItem="SZ9-GE-CMi" secondAttribute="trailing" id="ee5-Eo-Ed8"/>
+                        <constraint firstAttribute="bottom" secondItem="I73-jp-0tV" secondAttribute="bottom" id="uGY-m7-gWZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="XLT-fu-Qer" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="JaJ-JO-mkt"/>
+                <constraint firstAttribute="trailing" secondItem="XLT-fu-Qer" secondAttribute="trailing" id="baY-iT-He9"/>
+                <constraint firstAttribute="bottom" secondItem="XLT-fu-Qer" secondAttribute="bottom" id="vHL-2S-DmS"/>
+                <constraint firstItem="XLT-fu-Qer" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="ydc-lA-Ll0"/>
+            </constraints>
+            <connections>
+                <outlet property="selectSection" destination="SZ9-GE-CMi" id="MmZ-0h-TbP"/>
+                <outlet property="titieLabel" destination="I73-jp-0tV" id="kKh-Q5-dcW"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
+        </collectionReusableView>
+    </objects>
+</document>

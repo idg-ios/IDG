@@ -1,0 +1,64 @@
+//
+//  PrefixHeader.pch
+//  SDMarketingManagement
+//
+//  Created by Rao on 15-4-25.
+//  Copyright (c) 2015年 slovelys. All rights reserved.
+//
+
+#ifndef InjoyERP_PrefixHeader_pch
+#define InjoyERP_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+
+#import "SDJsonManager.h"
+#import "SDHeader.h"
+#import "SDNSNotificationKey.h"
+#import "SDCacheKey.h"
+#import "ChatDemoUIDefine.h"
+//#import "WCAlertView.h"
+#import "TTGlobalUICommon.h"
+#import "UIViewController+HUD.h"
+#import "UIViewController+DismissKeyboard.h"
+#import "NSString+Valid.h"
+#import "NSString+TextHelper.h"
+#import "Toast+UIView.h"
+#import "NSString+TextHelper.h"
+//#import "EMAlertView.h"
+#import "SDRootViewController.h"
+#import "AppDelegate.h"
+//#import "EMCallSession.h"
+//#import "OpenGLView20.h"
+//#import "EMCallManagerDelegate.h"
+// defs headers
+//#import "EMCallServiceDefs.h"
+//manager
+//#import "ICallManager.h"
+#import "RDVTabBarController.h"
+#import "SDShowPicController.h"
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import "CXIMLib.h"
+#import "CXHeader.h"
+#import "CXPushTypeHeader.h"
+#import "CXPushHelper.h"
+#import "MBProgressHUD.h"
+#import "SDHeader.h"
+#import "CXCategory.h"
+#import "IDGPushType.h"
+
+#define AFNETWORKING_ALLOW_INVALID_SSL_CERTIFICATES
+
+// end
+#endif
+#endif
+
+#ifdef DEBUG
+#define BKLog(...) NSLog(@"%s %@", __func__, [NSString stringWithFormat:__VA_ARGS__])
+#else
+#define BKLog(...)
+#endif
+

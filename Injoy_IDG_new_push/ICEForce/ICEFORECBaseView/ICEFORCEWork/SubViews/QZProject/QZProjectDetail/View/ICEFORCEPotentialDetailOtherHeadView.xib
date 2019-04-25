@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ICEFORCEPotentialDetailOtherHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="项目评分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rlx-3b-Mk3">
+                    <rect key="frame" x="15" y="16" width="62" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="62" id="gpK-Ug-oq1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvJ-j6-KQE">
+                    <rect key="frame" x="325" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="eNi-8Z-pmb"/>
+                    </constraints>
+                    <state key="normal" image="arrow_more.png">
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVW-GU-pv1">
+                    <rect key="frame" x="77" y="25" width="248" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NvJ-j6-KQE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="56F-eL-GZS"/>
+                <constraint firstAttribute="bottom" secondItem="NvJ-j6-KQE" secondAttribute="bottom" id="B3m-IU-C1a"/>
+                <constraint firstItem="xVW-GU-pv1" firstAttribute="leading" secondItem="Rlx-3b-Mk3" secondAttribute="trailing" id="BJp-Ag-6fm"/>
+                <constraint firstItem="Rlx-3b-Mk3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="FmF-fv-6Rm"/>
+                <constraint firstItem="NvJ-j6-KQE" firstAttribute="leading" secondItem="xVW-GU-pv1" secondAttribute="trailing" id="STT-qy-Ty7"/>
+                <constraint firstItem="Rlx-3b-Mk3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="lEn-W7-bNV"/>
+                <constraint firstAttribute="trailing" secondItem="NvJ-j6-KQE" secondAttribute="trailing" id="pzk-Km-Dpd"/>
+                <constraint firstItem="xVW-GU-pv1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="rNT-0Y-bFd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="descLabel" destination="xVW-GU-pv1" id="ngx-w8-Bax"/>
+                <outlet property="mroeButton" destination="NvJ-j6-KQE" id="k9s-x1-HYN"/>
+                <outlet property="nameLabel" destination="Rlx-3b-Mk3" id="FP2-lu-la4"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow_more.png" width="16" height="16"/>
+    </resources>
+</document>

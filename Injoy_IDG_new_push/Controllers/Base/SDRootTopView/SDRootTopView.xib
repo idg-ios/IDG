@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Bt2-uZ-ISS" customClass="SDRootTopView">
+            <rect key="frame" x="0.0" y="0.0" width="381" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPP-PI-7Rm">
+                    <rect key="frame" x="80" y="55" width="221" height="0.0"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apt-wS-pJI">
+                    <rect key="frame" x="140" y="44" width="100" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="XEg-rE-EeD"/>
+                        <constraint firstAttribute="height" constant="22" id="Xqo-KL-z5w"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="aPP-PI-7Rm" secondAttribute="trailing" constant="80" id="75O-2t-Vkf"/>
+                <constraint firstItem="aPP-PI-7Rm" firstAttribute="leading" secondItem="Bt2-uZ-ISS" secondAttribute="leading" constant="80" id="ExP-nv-q1H"/>
+                <constraint firstItem="apt-wS-pJI" firstAttribute="top" secondItem="aPP-PI-7Rm" secondAttribute="bottom" constant="-11" id="ZdJ-A0-DWP"/>
+                <constraint firstAttribute="bottom" secondItem="apt-wS-pJI" secondAttribute="bottom" id="lmU-1E-89p"/>
+                <constraint firstAttribute="centerX" secondItem="aPP-PI-7Rm" secondAttribute="centerX" id="pTe-DB-6St"/>
+                <constraint firstItem="apt-wS-pJI" firstAttribute="centerX" secondItem="Bt2-uZ-ISS" secondAttribute="centerX" id="wxd-9t-DBq"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="navTitleLabel" destination="aPP-PI-7Rm" id="PQK-X9-Y5z"/>
+                <outlet property="tipsLabel" destination="apt-wS-pJI" id="gV8-g2-mnB"/>
+            </connections>
+            <point key="canvasLocation" x="18.5" y="318"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

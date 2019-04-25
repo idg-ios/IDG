@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="ICEFORCEIndustryOtherCollectionReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAz-k6-Zb8">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZT9-uG-URj">
+                            <rect key="frame" x="10" y="0.0" width="310" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Il-CL-dkZ">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="2Il-CL-dkZ" firstAttribute="top" secondItem="dAz-k6-Zb8" secondAttribute="top" id="07A-Ou-kPZ"/>
+                        <constraint firstAttribute="bottom" secondItem="2Il-CL-dkZ" secondAttribute="bottom" id="JAK-ur-PTs"/>
+                        <constraint firstAttribute="bottom" secondItem="ZT9-uG-URj" secondAttribute="bottom" id="RTA-hj-1fU"/>
+                        <constraint firstAttribute="trailing" secondItem="ZT9-uG-URj" secondAttribute="trailing" id="Xm4-4R-eSz"/>
+                        <constraint firstItem="2Il-CL-dkZ" firstAttribute="leading" secondItem="dAz-k6-Zb8" secondAttribute="leading" id="f0A-wJ-NPp"/>
+                        <constraint firstAttribute="trailing" secondItem="2Il-CL-dkZ" secondAttribute="trailing" id="n00-nT-jwK"/>
+                        <constraint firstItem="ZT9-uG-URj" firstAttribute="leading" secondItem="dAz-k6-Zb8" secondAttribute="leading" constant="10" id="sxp-vv-ggZ"/>
+                        <constraint firstItem="ZT9-uG-URj" firstAttribute="top" secondItem="dAz-k6-Zb8" secondAttribute="top" id="vce-7B-XX8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="dAz-k6-Zb8" secondAttribute="bottom" id="Csq-wU-FIS"/>
+                <constraint firstAttribute="trailing" secondItem="dAz-k6-Zb8" secondAttribute="trailing" id="Xog-Bh-Yv6"/>
+                <constraint firstItem="dAz-k6-Zb8" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="r2D-bJ-zr2"/>
+                <constraint firstItem="dAz-k6-Zb8" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="sPh-um-TV9"/>
+            </constraints>
+            <connections>
+                <outlet property="selectSection" destination="2Il-CL-dkZ" id="uJ7-Uq-n6I"/>
+                <outlet property="titleLabel" destination="ZT9-uG-URj" id="4mZ-Uw-lU9"/>
+            </connections>
+            <point key="canvasLocation" x="44.927536231884062" y="65.625"/>
+        </collectionReusableView>
+    </objects>
+</document>
